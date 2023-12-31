@@ -1,18 +1,18 @@
 <div class="container flex justify-center items-center h-screen">
     <div class="w-1/2 p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
-        <form class="space-y-6">
+        <form class="space-y-6" wire:submit="login">
             <h5 class="text-2xl font-medium text-gray-900 dark:text-white text-center">Login</h5>
             <div>
                 <x-label for="email">Your Email</x-label>
-                <x-input type="email" wire:model="email" id="email" placeholder="name@company.com"/>
-                @error('email')
+                <x-input type="email" wire:model="form.email" id="email" placeholder="name@company.com"/>
+                @error('form.email')
                     <x-error-msg>{{ $message }}</x-error-msg>
                 @enderror
             </div>
             <div>
                 <x-label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your password</x-label>
-                <x-input type="password" name="password" id="password" placeholder="••••••••"/>
-                @error('password')
+                <x-input type="password" wire:model="form.password" name="password" id="password" placeholder="••••••••"/>
+                @error('form.password')
                     <x-error-msg>{{ $message }}</x-error-msg>
                 @enderror
             </div>
