@@ -18,12 +18,12 @@ class PurchaseOrder extends Model
         'date_order'
     ];
 
-    public function user() {
-        return $this->belongsTo(User::class);
+    public function outlet() {
+        return $this->belongsTo(Outlet::class);
     }
 
-    public function supplier() {
-        return $this->belongsTo(Supplier::class);
+    public function inventory() {
+        return $this->belongsTo(Inventory::class);
     }
 
     use HasFactory;
