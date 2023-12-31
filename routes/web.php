@@ -9,5 +9,5 @@ Route::middleware('guest')->group(function() {
 });
 
 Route::middleware('auth')->group(function() {
-    Route::get('/home', Home::class)->name('home');
+    Route::get('/', Home::class)->name('home');
 });
