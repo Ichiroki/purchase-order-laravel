@@ -13,5 +13,8 @@
         <div class="container">
             {{ $slot }}
         </div>
+        <div wire:offline>
+            Oops. now you are offline, get a connection to access
+        </div>
     </body>
 </html>
